@@ -24,11 +24,11 @@ StoreLocation.prototype.generateCustomersPerHour = function () {
 StoreLocation.prototype.refactorHours = function () {
   for (var i = this.openHour; i < this.closeHour; i++) {
     if (i < 12) {
-      this.hoursList.push(i + 'am');
+      this.hoursList.push(i + ':00am');
     } else if (i === 12) {
-      this.hoursList.push(i + 'pm');
+      this.hoursList.push(i + ':00pm');
     } else if (i > 12) {
-      this.hoursList.push((i - 12) + 'pm')
+      this.hoursList.push((i - 12) + ':00pm')
     }
   }
   return this.hoursList;
@@ -128,7 +128,7 @@ StoreLocation.prototype.renderTableFooter = function (allLocations) {
 };
 
 var seattle = new StoreLocation('Seattle', 23, 65, 6.3, 6, 20);
-seattle.renderTableHeaders();
+seattle.renderTableHeaders(); // table headers function is called only once to keep just 1 row of times data
 seattle.renderTableData();
 
 var tokyo = new StoreLocation('Tokyo', 3, 24, 1.2, 6, 20);
@@ -143,9 +143,10 @@ paris.renderTableData();
 var lima = new StoreLocation('Lima', 2, 16, 4.6, 6, 20);
 lima.renderTableData();
 
+// 'totals' row just called once for adding up 6am for each location, and so on.
 var allLocations = [seattle, tokyo, dubai, paris, lima];
+seattle.renderTableFooter(allLocations); 
 
-console.log(seattle.renderTableFooter(allLocations));
 
 // OLD CODE FROM LAB 6 and Class NOTES
 // var seattle = {
