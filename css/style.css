@@ -1,3 +1,80 @@
+html body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(52, 52, 52);
+  background-color: rgb(249, 209, 205);
+}
+
+html nav, a {
+  background-color: rgb(150, 150, 150);
+  color: rgb(33, 30, 30);
+  width: auto;
+  height: 50px;
+  overflow: hidden;
+}
+
+html nav a {
+  background-color: rgb(150, 150, 150);
+  color: rgb(33, 30, 30);
+  width: auto;
+  height: 50px;
+  float: left;
+  text-align: center;
+  padding: 18px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 30px;
+}
+
+html nav a:hover {
+  background-color: rgb(249, 209, 205);
+  color: rgb(33, 30, 30);
+}
+
+.right {
+  float: right;
+  margin-right: 30px;
+}
+
+html h1 {
+  font-weight: 900;
+  font-size: 6rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 40px;
+}
+
+html h3 {
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 40px;
+}
+
+text {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(33, 30, 30);
+}
+
+data {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(223, 106, 93);
+}
+
 img {
-  width: 300px;
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 50%;
+}
+
+div {
+  background-color: seashell;
+  width: 30%;
+}
+
+table {
+  background-color: seashell;
 }
