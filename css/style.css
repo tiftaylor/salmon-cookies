@@ -75,6 +75,9 @@ div {
   width: 30%;
 }
 
-table {
+table, td, th {
   background-color: seashell;
+  border: solid black 1px;
+  border-collapse: collapse;
+
 }
