@@ -75,6 +75,8 @@ StoreLocation.prototype.renderTableHeaders = function () {
 StoreLocation.prototype.renderTableData = function () {
   var table = document.getElementById('cookieData');
   var row = document.createElement('tr');
+
+  // city name cell
   var cityNameCell = document.createElement('td');
   cityNameCell.textContent = this.location;
   row.appendChild(cityNameCell);
@@ -89,6 +91,38 @@ StoreLocation.prototype.renderTableData = function () {
   tableDataCell = document.createElement('td');
   tableDataCell.textContent = this.dailyLocationTotal();
   row.appendChild(tableDataCell);
+
+  table.appendChild(row);
+};
+
+StoreLocation.prototype.renderTableFooter = function (allLocations) {
+  var table = document.getElementById('cookieData');
+  var row = document.createElement('tr');
+  var tableFootCell = document.createElement('th');
+  tableFootCell.textContent = 'Totals';
+  row.appendChild(tableFootCell);
+  
+  var cookieTotalArray = [];
+  // to look at 14 hours of the day for 14 totals cells
+  for (var i = 0; i < this.cookiesPerHourArray.length; i++) {
+    var cookieTotal = 0;
+    // add up each index from all 5 locations
+    for (var j = 0; j < allLocations.length; j++) {
+      cookieTotal = cookieTotal + allLocations[j].cookiesPerHourArray[i];
+    }
+    cookieTotalArray.push(cookieTotal);
+    tableFootCell = document.createElement('td');
+    tableFootCell.textContent = cookieTotalArray[i];
+    row.appendChild(tableFootCell);
+  }
+
+  var superTotal = 0;
+  for (var i = 0; i < allLocations.length; i++) {
+    superTotal = superTotal + allLocations[i].dailyLocationTotal();
+  }
+  tableFootCell = document.createElement('td');
+  tableFootCell.textContent = superTotal;
+  row.appendChild(tableFootCell);
 
   table.appendChild(row);
 };
@@ -109,7 +143,11 @@ paris.renderTableData();
 var lima = new StoreLocation('Lima', 2, 16, 4.6, 6, 20);
 lima.renderTableData();
 
+var allLocations = [seattle, tokyo, dubai, paris, lima];
 
+console.log(seattle.renderTableFooter(allLocations));
+
+// OLD CODE FROM LAB 6 and Class NOTES
 // var seattle = {
 //   minCustomers : 23,
 //   maxCustomers : 65,
