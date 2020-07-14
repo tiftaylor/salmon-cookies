@@ -10,4 +10,5 @@ We were given a Problem Domain about a friend who wants to start a confection it
 - Used screenshot from Class Demo done by Nicholas Carignan, stored on the [Code Fellows 201d65 Class Repo](https://github.com/codefellows/seattle-201d65):   
   <img src='img/labDemo.png' width='300px'>
 - To center my image I checked this [w3schools link](https://www.w3schools.com/howto/howto_css_image_center.asp)
-- 
+- Calling a prototype function inside the constructor, I used [StackOverflow](https://stackoverflow.com/a/2294254)
+- Trying to keep my labels clean on my contact page, I used this [StackOverflow](https://stackoverflow.com/questions/4466596/css-how-to-align-vertically-a-label-and-input-inside-a-div/4467026) link
