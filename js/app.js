@@ -266,7 +266,7 @@ paris.displayLists();
 var lima = {
   minCustomers : 2,
   maxCustomers : 16,
-  AvgCookiesPerCustomer : 4.6,
+  avgCookiesPerCustomer : 4.6,
  
   customersPerHour : function () {
     var min = this.minCustomers;
