@@ -4,8 +4,12 @@ body {
   background-color: rgb(249, 209, 205);
 }
 
+html nav {
+  overflow: hidden;
+}
+
 html nav, a {
-  background-color: rgb(121, 119, 119);
+  background-color: #797777;
   color: rgb(33, 30, 30);
   width: auto;
   height: 90px;
@@ -35,6 +39,10 @@ html nav a {
 html nav a:hover {
   background-color: rgb(249, 209, 205);
   color: rgb(33, 30, 30);
+}
+
+.about > p {
+  font-size: 1.3rem;
 }
 
 .right {
@@ -75,13 +83,47 @@ data {
   color: rgb(223, 106, 93);
 }
 
-img {
-  width: 600px;
+#logo {
+  width: 50px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.salmon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   width: 50%;
+}
+
+#family {
+  width: 700px;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#fourFish {
+  width: 400px;
+  float: left;
+  margin-top: 0;
+}
+
+#cutter {
+  width: 30px;
+  padding: 5px 5px;
+  margin-bottom: -12px;
+}
+
+#chinook {
+  width: 250px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 div {
@@ -112,11 +154,12 @@ table, td, th {
 #info {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+
   background-color: rgb(249, 209, 205);
-  width: 750px;
+  width: 800px;
   padding: 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 #info p {
@@ -130,24 +173,66 @@ table, td, th {
 #contact {
   width: 50%;
   padding: 20px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(249, 209, 205);
+  overflow: hidden;
 }
 
 #contact input {
-  margin: 5px;
   margin-bottom: 15px;
   height: 20px;
+  width: 250px;
 }
 
 #contact label {
   display: block;
+  margin-top: 3px;
+  padding-right: 5px;
+  padding-left: 10px;
   height: 20px;
+  float: left;
 }
 
-.topalign {
-  text-justify: top;
+#contact .topalign {
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  width: auto;
+ 
+}
+
+#contact #message {
+  margin-left: 30px;
+  display: block;
+  float: left;
+}
+
+
+article {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+  overflow: hidden;
+}
+
+article > img, section {
+  width: 50%;
+  float: left;
+}
+
+article > #shirt {
+  width: 400px;
+  margin-right: 60px;
+  margin-top: 0;
+}
+
+article > section > p {
+  font-size: 1.75rem;
+  padding-top: 70px;
+  vertical-align: middle;
 }
 
 .specialA {
