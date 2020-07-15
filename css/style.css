@@ -1,27 +1,35 @@
-html body {
+body {
   font-family: 'Poppins', sans-serif;
   color: rgb(52, 52, 52);
   background-color: rgb(249, 209, 205);
 }
 
 html nav, a {
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(121, 119, 119);
   color: rgb(33, 30, 30);
   width: auto;
-  height: 50px;
+  height: 90px;
   overflow: hidden;
 }
 
+nav > ul > li {
+  line-height: 90px;
+}
+
 html nav a {
-  background-color: rgb(150, 150, 150);
-  color: rgb(33, 30, 30);
+  background-color: rgb(121, 119, 119);
+  color: rgb(249, 209, 205);
   width: auto;
-  height: 50px;
+  height: 90px;
   float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
-  padding: 20px 30px 10px 30px;
+  /* padding: 20px 30px 10px 30px; */
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5rem;
 }
 
 html nav a:hover {
@@ -140,4 +148,13 @@ table, td, th {
 
 .topalign {
   text-justify: top;
+}
+
+.specialA {
+  background-color: rgb(249, 209, 205);
+}
+
+footer > p {
+  width: 400px;
+  margin: 0 auto;
 }
