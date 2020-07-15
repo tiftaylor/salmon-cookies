@@ -37,6 +37,10 @@ html nav a:hover {
   color: rgb(33, 30, 30);
 }
 
+.about > p {
+  font-size: 1.3rem;
+}
+
 .right {
   float: right;
 }
@@ -84,6 +88,19 @@ img {
   width: 50%;
 }
 
+#family {
+  width: 500px;
+  float: left;
+  margin-top: 0;
+}
+
+#cutter {
+  width: 30px;
+  padding: 5px 5px;
+  display: inline;
+  margin-bottom: -12px;
+}
+
 div {
   background-color: rgba(255, 234, 240, 0.651);
   width: 30%;
@@ -112,9 +129,9 @@ table, td, th {
 #info {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+
   background-color: rgb(249, 209, 205);
-  width: 750px;
+  width: 800px;
   padding: 20px;
   text-align: center;
 }
@@ -136,18 +153,54 @@ table, td, th {
 }
 
 #contact input {
-  margin: 5px;
   margin-bottom: 15px;
   height: 20px;
 }
 
 #contact label {
   display: block;
+  margin-top: 3px;
+  padding-right: 5px;
+  padding-left: 10px;
   height: 20px;
+  float: left;
 }
 
-.topalign {
-  text-justify: top;
+#contact .topalign {
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  width: auto;
+ 
+}
+
+#contact #message {
+  margin-left: 30px;
+}
+
+
+article {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+article > img, section {
+  width: 30%;
+  float: left;
+  margin-top
+}
+
+article > #shirt {
+  width: 400px;
+  margin-left: 300px;
+  margin-right: 60px;
+  margin-top: 0;
+}
+
+article > section > p {
+  font-size: 1.75rem;
+  padding-top: 70px;
+  vertical-align: middle;
 }
 
 .specialA {
