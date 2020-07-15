@@ -4,8 +4,12 @@ body {
   background-color: rgb(249, 209, 205);
 }
 
+html nav {
+  overflow: hidden;
+}
+
 html nav, a {
-  background-color: rgb(121, 119, 119);
+  background-color: #797777;
   color: rgb(33, 30, 30);
   width: auto;
   height: 90px;
@@ -79,17 +83,31 @@ data {
   color: rgb(223, 106, 93);
 }
 
-img {
-  width: 600px;
+#logo {
+  width: 50px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.salmon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   width: 50%;
 }
 
 #family {
-  width: 500px;
+  width: 700px;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#fourFish {
+  width: 400px;
   float: left;
   margin-top: 0;
 }
@@ -97,8 +115,15 @@ img {
 #cutter {
   width: 30px;
   padding: 5px 5px;
-  display: inline;
   margin-bottom: -12px;
+}
+
+#chinook {
+  width: 250px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 div {
@@ -134,6 +159,7 @@ table, td, th {
   width: 800px;
   padding: 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 #info p {
@@ -147,14 +173,17 @@ table, td, th {
 #contact {
   width: 50%;
   padding: 20px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(249, 209, 205);
+  overflow: hidden;
 }
 
 #contact input {
   margin-bottom: 15px;
   height: 20px;
+  width: 250px;
 }
 
 #contact label {
@@ -176,23 +205,26 @@ table, td, th {
 
 #contact #message {
   margin-left: 30px;
+  display: block;
+  float: left;
 }
 
 
 article {
   margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
   overflow: hidden;
 }
 
 article > img, section {
-  width: 30%;
+  width: 50%;
   float: left;
-  margin-top
 }
 
 article > #shirt {
   width: 400px;
-  margin-left: 300px;
   margin-right: 60px;
   margin-top: 0;
 }

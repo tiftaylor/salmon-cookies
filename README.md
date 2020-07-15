@@ -12,3 +12,5 @@ We were given a Problem Domain about a friend who wants to start a confection it
 - To center my image I checked this [w3schools link](https://www.w3schools.com/howto/howto_css_image_center.asp)
 - Calling a prototype function inside the constructor, I used [StackOverflow](https://stackoverflow.com/a/2294254)
 - Trying to keep my labels clean on my contact page, I used this [StackOverflow](https://stackoverflow.com/questions/4466596/css-how-to-align-vertically-a-label-and-input-inside-a-div/4467026) link
+- To make my input boxes on the Contact page longer, I used this article from [StackOverflow](https://stackoverflow.com/questions/33828542/how-to-make-the-input-text-wider) to adjust their width
+- To put an image in the nav bar, I used this [w3schools link](https://www.w3schools.com/howto/howto_css_navbar_icon.asp)
