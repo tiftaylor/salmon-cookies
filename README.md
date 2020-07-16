@@ -14,3 +14,5 @@ We were given a Problem Domain about a friend who wants to start a confection it
 - Trying to keep my labels clean on my contact page, I used this [StackOverflow](https://stackoverflow.com/questions/4466596/css-how-to-align-vertically-a-label-and-input-inside-a-div/4467026) link
 - To make my input boxes on the Contact page longer, I used this article from [StackOverflow](https://stackoverflow.com/questions/33828542/how-to-make-the-input-text-wider) to adjust their width
 - To put an image in the nav bar, I used this [w3schools link](https://www.w3schools.com/howto/howto_css_navbar_icon.asp)
+- To figure out how to remove an element from the page in my callback function (for the form) I used an example from [A Beautiful Site](https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript)
+- To figure out how to add an `id` to a new element I'm adding to the page, I used this [w3schools link](https://www.w3schools.com/jsref/prop_html_id.asp)
