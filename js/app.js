@@ -3,6 +3,34 @@
 // Global Variables
 var allLocations = [];
 
+
+// ========== Form Stuff ================= //
+var addLocationForm = document.getElementById('addLocation');
+
+addLocationForm.addEventListener('submit', addALocation);
+
+function addALocation(event){
+  event.preventDefault();
+  // get params from inputs
+  var param1 = event.target.cityName.value;
+  var param2 = event.target.min.value;
+  var param3 = event.target.max.value;
+  var param4 = event.target.avgCookies.value;
+  var param5 = 6;
+  var param6 = 20;
+
+  // get those things and pass them into constructor
+  var newCity = new StoreLocation(param1, param2, param3, param4, param5, param6);
+
+  var footerElement = document.getElementById('footer');
+  footerElement.parentNode.removeChild(footerElement); // referenced where I got this in the README
+
+  // render that city in the table
+  newCity.renderTableData(); // BUT it needs to go ABOVE TOTALS row
+  renderTableFooter(allLocations); 
+}
+
+
 // Constructor function
 function StoreLocation (location, min, max, avgCookies, openHour, closeHour) {
   this.location = location;
@@ -156,31 +184,7 @@ renderTableFooter(allLocations);
 
 
 
-// ========== Form Stuff ================= //
-var addLocationForm = document.getElementById('addLocation');
 
-addLocationForm.addEventListener('submit', addALocation);
-
-function addALocation(event){
-  event.preventDefault();
-  // get params from inputs
-  var param1 = event.target.cityName.value;
-  var param2 = event.target.min.value;
-  var param3 = event.target.max.value;
-  var param4 = event.target.avgCookies.value;
-  var param5 = 6;
-  var param6 = 20;
-
-  // get those things and pass them into constructor
-  var newCity = new StoreLocation(param1, param2, param3, param4, param5, param6);
-
-  var footerElement = document.getElementById('footer');
-  footerElement.parentNode.removeChild(footerElement);
-
-  // render that city in the table
-  newCity.renderTableData(); // BUT it needs to go ABOVE TOTALS row
-  renderTableFooter(allLocations); 
-}
 
 
 
