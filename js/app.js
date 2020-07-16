@@ -1,5 +1,9 @@
 'use strict';
 
+// Global Variables
+var allLocations = [];
+
+// Constructor function
 function StoreLocation (location, min, max, avgCookies, openHour, closeHour) {
   this.location = location;
   this.minCustomers = min;
@@ -12,6 +16,9 @@ function StoreLocation (location, min, max, avgCookies, openHour, closeHour) {
   this.cookiesPerHourArray = [];
 
   this.calculateCookiesForOpenHours();
+
+  // add the new instance to the array
+  allLocations.push(this);
 };
 
 StoreLocation.prototype.generateCustomersPerHour = function () {
@@ -52,26 +59,6 @@ StoreLocation.prototype.dailyLocationTotal = function() {
   return sumOfCookies;
 };
 
-StoreLocation.prototype.renderTableHeaders = function () {
-  var table = document.getElementById('cookieData');
-  var row = document.createElement('tr');
-  var tableHeadCell = document.createElement('th');
-  row.appendChild(tableHeadCell);
-
-  // hour of the day headers
-  for (var i = 0; i < this.hoursList.length; i++) {
-    tableHeadCell = document.createElement('th');
-    tableHeadCell.textContent = this.hoursList[i];
-    row.appendChild(tableHeadCell);
-  }
-  // total header
-  tableHeadCell = document.createElement('th');
-  tableHeadCell.textContent = 'Daily Location Total';
-  row.appendChild(tableHeadCell);
-
-  table.appendChild(row);
-};
-
 StoreLocation.prototype.renderTableData = function () {
   var table = document.getElementById('cookieData');
   var row = document.createElement('tr');
@@ -91,6 +78,26 @@ StoreLocation.prototype.renderTableData = function () {
   tableDataCell = document.createElement('td');
   tableDataCell.textContent = this.dailyLocationTotal();
   row.appendChild(tableDataCell);
+
+  table.appendChild(row);
+};
+
+function renderTableHeaders () {
+  var table = document.getElementById('cookieData');
+  var row = document.createElement('tr');
+  var tableHeadCell = document.createElement('th');
+  row.appendChild(tableHeadCell);
+
+  // hour of the day headers
+  for (var i = 0; i < allLocations[0].hoursList.length; i++) {
+    tableHeadCell = document.createElement('th');
+    tableHeadCell.textContent = allLocations[0].hoursList[i];
+    row.appendChild(tableHeadCell);
+  }
+  // total header
+  tableHeadCell = document.createElement('th');
+  tableHeadCell.textContent = 'Daily Location Total';
+  row.appendChild(tableHeadCell);
 
   table.appendChild(row);
 };
@@ -124,29 +131,65 @@ function renderTableFooter (allLocations) {
   tableFootCell = document.createElement('td');
   tableFootCell.textContent = superTotal;
   row.appendChild(tableFootCell);
-
+  row.id = 'footer';
   table.appendChild(row);
 };
 
-var seattle = new StoreLocation('Seattle', 23, 65, 6.3, 6, 20);
-seattle.renderTableHeaders(); // table headers function is called only once to keep just 1 row of times data
-seattle.renderTableData();
+// initial assignment store instances'
+new StoreLocation('Seattle', 23, 65, 6.3, 6, 20);
+new StoreLocation('Tokyo', 3, 24, 1.2, 6, 20);
+new StoreLocation('Dubai', 11, 32, 3.7, 6, 20);
+new StoreLocation('Paris', 20, 38, 2.3, 6, 20);
+new StoreLocation('Lima', 2, 16, 4.6, 6, 20);
 
-var tokyo = new StoreLocation('Tokyo', 3, 24, 1.2, 6, 20);
-tokyo.renderTableData();
+// table headers function is called only once to keep just 1 row of times data
+renderTableHeaders(); 
 
-var dubai = new StoreLocation('Dubai', 11, 32, 3.7, 6, 20);
-dubai.renderTableData();
+// loop through allLocations array to render table DATA for each new instance
+for(var i = 0; i < allLocations.length; i++) {
+  console.log(allLocations)
+  allLocations[i].renderTableData();
+}
 
-var paris = new StoreLocation('Paris', 20, 38, 2.3, 6, 20);
-paris.renderTableData();
-
-var lima = new StoreLocation('Lima', 2, 16, 4.6, 6, 20);
-lima.renderTableData();
-
-// 'totals' row just called once for adding up 6am for each location, and so on.
-var allLocations = [seattle, tokyo, dubai, paris, lima];
+// footer ran 1 from global function adding hourly totals
 renderTableFooter(allLocations); 
+
+
+
+// ========== Form Stuff ================= //
+var addLocationForm = document.getElementById('addLocation');
+
+addLocationForm.addEventListener('submit', addALocation);
+
+function addALocation(event){
+  event.preventDefault();
+  // get params from inputs
+  var param1 = event.target.cityName.value;
+  var param2 = event.target.min.value;
+  var param3 = event.target.max.value;
+  var param4 = event.target.avgCookies.value;
+  var param5 = 6;
+  var param6 = 20;
+
+  // get those things and pass them into constructor
+  var newCity = new StoreLocation(param1, param2, param3, param4, param5, param6);
+
+  var footerElement = document.getElementById('footer');
+  footerElement.parentNode.removeChild(footerElement);
+
+  // render that city in the table
+  newCity.renderTableData(); // BUT it needs to go ABOVE TOTALS row
+  renderTableFooter(allLocations); 
+}
+
+
+
+
+
+
+
+
+
 
 
 // OLD CODE FROM LAB 6 and Class NOTES
