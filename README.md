@@ -16,3 +16,4 @@ We were given a Problem Domain about a friend who wants to start a confection it
 - To put an image in the nav bar, I used this [w3schools link](https://www.w3schools.com/howto/howto_css_navbar_icon.asp)
 - To figure out how to remove an element from the page in my callback function (for the form) I used an example from [A Beautiful Site](https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript)
 - To figure out how to add an `id` to a new element I'm adding to the page, I used this [w3schools link](https://www.w3schools.com/jsref/prop_html_id.asp)
+- To validate my HTML, I read the article given in the assignment [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
