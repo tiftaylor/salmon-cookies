@@ -28,7 +28,23 @@
   <div class='about'>
     <p>The table below represents the random calculated cookies sold per hour during the hours of 6am to 7pm at each store location</p>
   </div>
-  
+
+    <form id='addLocation' action="">
+      <fieldset>
+        <legend>Add a New City and City Data</legend>
+        
+        <label for='cityName'>City Name: </label>
+        <input type='text' name='cityName'>
+
+        <label for='min'>Minimum Customers Per Hour: </label>
+        <input type="text" name='min'>
+
+        <label for='max'>Maximum Customers Per Hour: </label>
+        <input type='text' name='max'>
+
+        <input type="submit" value="Add to Table below!">
+      </fieldset>
+    </form>
   
   <table id='cookieData'></table>
 

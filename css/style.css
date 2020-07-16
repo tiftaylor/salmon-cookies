@@ -209,6 +209,26 @@ table, td, th {
   float: left;
 }
 
+#addresses {
+  width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+#addresses h4 {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#addresses p {
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+#addresses > ul > li {
+  padding: 10px;
+}
 
 article {
   margin-top: 50px;
