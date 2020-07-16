@@ -95,18 +95,19 @@ StoreLocation.prototype.renderTableData = function () {
   table.appendChild(row);
 };
 
-StoreLocation.prototype.renderTableFooter = function (allLocations) {
+function renderTableFooter (allLocations) {
   var table = document.getElementById('cookieData');
   var row = document.createElement('tr');
   var tableFootCell = document.createElement('th');
+  var hoursOfDay = 14;
   tableFootCell.textContent = 'Totals';
   row.appendChild(tableFootCell);
   
   var cookieTotalArray = [];
   // to look at 14 hours of the day for 14 totals cells
-  for (var i = 0; i < this.cookiesPerHourArray.length; i++) {
+  for (var i = 0; i < hoursOfDay; i++) {
     var cookieTotal = 0;
-    // add up each index from all 5 locations
+    // add up each index from all locations
     for (var j = 0; j < allLocations.length; j++) {
       cookieTotal = cookieTotal + allLocations[j].cookiesPerHourArray[i];
     }
@@ -145,7 +146,7 @@ lima.renderTableData();
 
 // 'totals' row just called once for adding up 6am for each location, and so on.
 var allLocations = [seattle, tokyo, dubai, paris, lima];
-seattle.renderTableFooter(allLocations); 
+renderTableFooter(allLocations); 
 
 
 // OLD CODE FROM LAB 6 and Class NOTES
