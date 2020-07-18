@@ -172,8 +172,8 @@ table, td, th {
 
 #contact {
   width: 50%;
-  padding: 20px;
-  margin-top: 30px;
+  padding: 30px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(249, 209, 205);
@@ -262,4 +262,58 @@ article > section > p {
 footer > p {
   width: 400px;
   margin: 0 auto;
+}
+
+#addLocation {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+fieldset {
+  border: solid 1px black;
+  padding: 15px;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+.formDiv {
+  width: 50%;
+  float: left;
+  background-color: rgb(249, 209, 205);
+}
+
+.formDiv label {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.formDiv input {
+  height: 25px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#button {
+  background-color: seashell;
+  border: dashed 1px gray;
+  padding: 10px;
+  position: relative;
+  float: right;
+  font-size: 1.3rem;
+}
+
+#button:hover {
+  background-color: lightgray;
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
 }

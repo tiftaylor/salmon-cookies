@@ -92,7 +92,7 @@ StoreLocation.prototype.renderTableData = function () {
   var row = document.createElement('tr');
 
   // city name cell
-  var cityNameCell = document.createElement('td');
+  var cityNameCell = document.createElement('th');
   cityNameCell.textContent = this.location;
   row.appendChild(cityNameCell);
 
